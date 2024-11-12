@@ -14,16 +14,7 @@ Follow these steps to set up the project locally.
     ```bash
     cd hackathon_2024
     ```
-3. Install dependencies:
-    ```bash
-    [insert relevant command, e.g., npm install]
-    ```
-4. Set up environment variables by creating a `.env` file based on `.env.example`.
 
-5. Start the development server:
-    ```bash
-    [insert relevant command, e.g., npm start]
-    ```
 
 ## Usage
 
