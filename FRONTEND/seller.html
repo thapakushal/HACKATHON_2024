@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seller Platform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body >
+  
+
+  <main class="container mx-auto mt-8 px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Create Listing Form for mal basket selletr -->
+      <section class="bg-white rounded-lg shadow-lg p-6">
+        <h2 class="text-xl font-bold text-green-800 mb-4">Create a Listing</h2>
+        <form>
+          <div class="mb-4">
+            <label for="productType" class="block text-sm font-medium text-green-700">Manure Type</label>
+            <select id="productType" name="productType" class="mt-1 block w-full p-2 border border-green-300 rounded-md focus:ring-green-500 focus:border-green-500">
+              <option value="cow">Cow Manure</option>
+              <option value="buffalo">Buffalo Manure</option>
+              <option value="compost">Compost Manure</option>
+              <option value="Chicken">Chicken Manure</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label for="productName" class="block text-sm font-medium text-green-700">Product Name</label>
+            <input type="text" id="productName" name="productName" class="mt-1 block w-full p-2 border border-green-300 rounded-md focus:ring-green-500 focus:border-green-500" placeholder="e.g., Premium Organic Manure">
+          </div>
+
+          <div class="mb-4">
+            <label for="quantity" class="block text-sm font-medium text-green-700">Quantity (in kg)</label>
+            <input type="number" id="quantity" name="quantity" class="mt-1 block w-full p-2 border border-green-300 rounded-md focus:ring-green-500 focus:border-green-500" placeholder="e.g., 50">
+          </div>
+
+          <div class="mb-4">
+            <label for="price" class="block text-sm font-medium text-green-700">Price (per kg)</label>
+            <input type="number" id="price" name="price" class="mt-1 block w-full p-2 border border-green-300 rounded-md focus:ring-green-500 focus:border-green-500" placeholder="e.g., 100">
+          </div>
+
+          <button type="submit" class="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500">
+            Create Listing
+          </button>
+        </form>
+      </section>
+
+      <!-- View Order Status for seller -->
+      <section class="bg-white rounded-lg shadow-lg p-6">
+        <h2 class="text-xl font-bold text-green-800 mb-4">Order Status</h2>
+        <div class="overflow-x-auto">
+          <table class="min-w-full bg-white border border-green-300">
+            <thead class="bg-green-600 text-white">
+              <tr>
+                <th class="py-2 px-4 border-b">Order ID</th>
+                <th class="py-2 px-4 border-b">Product</th>
+                <th class="py-2 px-4 border-b">Quantity</th>
+                <th class="py-2 px-4 border-b">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="py-2 px-4 border-b text-center">#1234</td>
+                <td class="py-2 px-4 border-b">Organic Manure</td>
+                <td class="py-2 px-4 border-b text-center">25 kg</td>
+                <td class="py-2 px-4 border-b text-center">
+                  <span class="text-sm font-medium text-green-600">Pending</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-2 px-4 border-b text-center">#1235</td>
+                <td class="py-2 px-4 border-b">Compost Manure</td>
+                <td class="py-2 px-4 border-b text-center">50 kg</td>
+                <td class="py-2 px-4 border-b text-center">
+                  <span class="text-sm font-medium text-blue-600">Delivered</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+
+</body>
+</html>
