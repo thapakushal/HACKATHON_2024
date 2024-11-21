@@ -1,0 +1,109 @@
+body {
+    background-color: #f9fafb;
+  }
+  
+  /* Section Styles */
+  .form-section,
+  .order-status-section {
+    background-color: #ffffff; 
+    border-radius: 0.5rem; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 1.5rem; 
+  }
+  
+  /* Section Title */
+  .section-title {
+    font-size: 1.25rem; 
+    font-weight: 700; 
+    color: #065f46; 
+    margin-bottom: 1rem; 
+  }
+  
+  /* Form Styles */
+  .form-group {
+    margin-bottom: 1rem; 
+  }
+  
+  .form-label {
+    display: block;
+    font-size: 0.875rem; 
+    font-weight: 500; 
+    color: #047857; 
+  }
+  
+  .form-input,
+  .form-select,
+  .form-input[type="file"] {
+    display: block;
+    width: 100%; 
+    padding: 0.5rem; 
+    border: 1px solid #d1fae5; 
+    border-radius: 0.375rem; 
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .form-input:focus,
+  .form-select:focus,
+  .form-input[type="file"]:focus {
+    border-color: #10b981; 
+    box-shadow: 0 0 0 3px #d1fae5; 
+  }
+  
+  /* Button Styles */
+  .submit-button {
+    width: 100%; 
+    background-color: #047857; 
+    color: #ffffff; 
+    padding: 0.5rem 1rem; 
+    border: none;
+    border-radius: 0.375rem; 
+    font-size: 1rem; 
+    font-weight: 500; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #065f46; 
+  }
+  
+  /* Table Styles */
+  .table-container {
+    overflow-x: auto; 
+  }
+  
+  .order-table {
+    width: 100%; 
+    border-collapse: collapse;
+    background-color: #ffffff; 
+    border: 1px solid #d1fae5; 
+  }
+  
+  .table-header {
+    background-color: #047857; 
+    color: #ffffff; 
+  }
+  
+  .table-cell {
+    padding: 0.5rem 1rem; 
+    border-bottom: 1px solid #d1fae5; 
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Status Styles */
+  .status-pending {
+    color: #047857; 
+    font-size: 0.875rem; 
+    font-weight: 500; 
+  }
+  
+  .status-delivered {
+    color: #2563eb; 
+    font-size: 0.875rem; 
+    font-weight: 500; 
+  }
+  
