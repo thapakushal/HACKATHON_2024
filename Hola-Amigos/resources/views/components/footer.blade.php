@@ -5,7 +5,7 @@
           alt="Logo" 
           class="block object-contain w-10 h-10" 
           src="{{ asset('images/logo.png') }}">
-        <span class="ml-3 text-xl">Mal Basket</span>
+        <span class="ml-3 text-xl">MAL Basket</span>
       </a>
       <p class="mt-4 text-sm sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-white sm:py-2 sm:mt-0">
         © 2024 Mal Basket
