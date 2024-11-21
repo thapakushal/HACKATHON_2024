@@ -16,7 +16,7 @@
         <h2 class="section-title">Create a Listing</h2>
         
         
-        <form action="datasubmit" method="POST">
+        <form action="{{ route('datasubmit') }}" method="POST" enctype="multipart/form-data">
           @csrf
           <div class="form-group">
             <label for="productType" class="form-label">Manure Type</label>

@@ -6,6 +6,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use App\Https\Controllers\IndexController;
 use App\Http\Controllers\SellerController;
+use App\Http\Controllers\ProductController;
 
 
 
@@ -36,11 +37,12 @@ Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 
 
-Route::middleware('auth')->group(function () {
-    Route::get('/seller', [SellerController::class, 'index'])->name('seller.index');
-    Route::post('/seller/store', [SellerController::class, 'store'])->name('seller.store');
-    Route::post('/seller/order/{orderId}/status', [SellerController::class, 'updateOrderStatus'])->name('seller.updateOrderStatus');
-});
 
 
-Route::post('datasubmit');
+Route::post('/datasubmit', [SellerController::class, 'store'])->name('datasubmit');
+
+
+// Route::get('/products', [SellerController::class, 'index'])->name('products.index');
+
+
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
