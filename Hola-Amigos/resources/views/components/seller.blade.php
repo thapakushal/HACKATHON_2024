@@ -21,11 +21,11 @@
           <div class="form-group">
             <label for="productType" class="form-label">Manure Type</label>
             <select id="productType" name="productType" class="form-select">
-              <option value="cow">Cow Manure</option>
-              <option value="buffalo">Buffalo Manure</option>
-              <option value="compost">Compost Manure</option>
-              <option value="Chicken">Hen's Manure</option>
-              <option value="other">Other</option>
+              <option value="Cow Manure">Cow Manure</option>
+              <option value="Buffalo Manure">Buffalo Manure</option>
+              <option value="Compost Manure">Compost Manure</option>
+              <option value="Hen's Manure">Hen's Manure</option>
+              <option value="Other">Other</option>
             </select>
           </div>
 

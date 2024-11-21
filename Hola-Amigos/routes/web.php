@@ -42,7 +42,7 @@ Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/datasubmit', [SellerController::class, 'store'])->name('datasubmit');
 
 
-// Route::get('/products', [SellerController::class, 'index'])->name('products.index');
 
 
-Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+// Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+Route::get('/', [ProductController::class, 'index']);

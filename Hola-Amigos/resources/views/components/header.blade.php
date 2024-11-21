@@ -5,7 +5,7 @@
                 alt="Logo" 
                 class="block object-contain h-12 p-2 w-13" 
                 src="{{ asset('images/logo.png') }}">
-            <span class="ml-3 text-xl">MAL Basket</span>
+            <span class="ml-3 text-xl">मल Basket</span>
         </a>
         <nav class="flex flex-wrap items-center justify-center text-base md:ml-auto">
             <a href="{{ url('/') }}" class="mr-5 hover:text-gray-300">Home</a>

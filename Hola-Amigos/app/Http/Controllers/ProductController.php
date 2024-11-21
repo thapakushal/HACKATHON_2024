@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;  // Assuming the 'Product' model exists
+use App\Models\Product; // Import the Product model
 
 class ProductController extends Controller
 {
@@ -11,7 +11,7 @@ class ProductController extends Controller
         // Fetch all products from the database
         $products = Product::all();
 
-        // Pass products to the view
-        return view('products', compact('products'));
+        // Pass products data to the view
+        return view('components.products', compact('products'));
     }
 }
