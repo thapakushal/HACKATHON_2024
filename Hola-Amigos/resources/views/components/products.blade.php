@@ -32,14 +32,17 @@
     </div>
 
     <!-- Product Section -->
+    <div class="cart">
+    
+
     <section class="text-gray-600 body-font">
         <div class="container px-5 py-16 mx-auto">
             <div class="flex flex-wrap -m-4">
                 @foreach($products as $product)
                 <div class="w-full p-4 lg:w-1/4 md:w-1/2">
-                    <a class="relative block h-48 overflow-hidden rounded">
-                        <img alt="ecommerce" class="block object-cover object-center w-full h-full" 
-                             src="{{ $product->productImage ? asset('storage/'.$product->productImage) : 'https://dummyimage.com/420x260' }}">
+                    <a href="{{ route('buy') }}" class="relative block h-48 overflow-hidden rounded">
+                       <img alt="ecommerce" class="block object-cover object-center w-full h-full" 
+                             src="{{ $product->productImage ? asset('storage/'.$product->productImage) : 'https://dummyimage.com/420x260' }}"> 
                     </a>
                     <div class="mt-4">
                         <h3 class="mb-1 text-xs tracking-widest text-gray-500 title-font">{{ $product->productName }}</h3>
@@ -52,6 +55,19 @@
             </div>
         </div>
     </section>
+  </a>
+</div>
+
+
+
+<button class="px-4 py-2 font-semibold text-white rounded-md bg-[rgb(33,163,80)] mx-auto block">
+    View More
+  </button>
+
+  <br>
+  <br>
+  <br>
+  
 
     <!-- Include Footer -->
     <x-footer />

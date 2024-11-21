@@ -7,6 +7,9 @@ use App\Http\Controllers\ContactController;
 use App\Https\Controllers\IndexController;
 use App\Http\Controllers\SellerController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\BuyController;
+use App\Http\Controllers\CheckController;
+
 
 
 
@@ -46,3 +49,23 @@ Route::post('/datasubmit', [SellerController::class, 'store'])->name('datasubmit
 
 // Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 Route::get('/', [ProductController::class, 'index']);
+
+
+
+Route::get('/buy', [BuyController::class, 'index'])->name('buy');
+
+
+
+// Route::get('/contact', [ContactController::class, 'showForm'])->name('contact.show');
+// Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact.submit');
+
+
+
+Route::get('/checkout',[CheckController::class, 'index'])->name('checkout');
+
+
+
+// // In web.php
+// Route::get('/product/{id}', [ProductController::class, 'showProduct'])->name('product.show');
+
+

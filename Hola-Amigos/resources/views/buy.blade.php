@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buy Manure</title>
+   <link rel="stylesheet" href="{{ asset('css/buy.css') }}">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+<x-header />
+    
+  <section class="product-section">
+    <div class="container">
+      <div class="product-wrapper">
+        <img alt="ecommerce" class="product-image" src="../images/manure1.webp">
+
+
+        
+        <div class="product-details">
+          <h2 class="product-type">Cow Manure</h2>
+          <h1 class="product-title">Pure Organic</h1>
+          <div class="product-rating">
+            <span class="rating-stars">
+              <!-- Star Icons -->
+              <svg class="star-icon" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+              <svg class="star-icon" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+              <svg class="star-icon" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+              <svg class="star-icon" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+              <svg class="star-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+              <span class="rating-count">4 Reviews</span>
+            </span>
+          </div>
+          <p class="product-description">Organic Manure</p>
+          <div class="product-options">
+            <div class="weight-selector">
+              <span class="label">Weight (Kg)</span>
+              <input
+                type="number"
+                min="1"
+                class="weight-input"
+                placeholder="Enter weight (e.g., 10)"
+              />
+            </div>
+          </div>
+          <div class="product-footer">
+            <span class="product-price">Rs. 100.00 per Kg</span>
+            <a href="{{ route('checkout') }}">
+              <button class="buy-now-button">Buy Now</button>
+          </a>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<x-footer />
+</body>
+</html>
