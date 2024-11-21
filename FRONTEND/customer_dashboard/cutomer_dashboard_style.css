@@ -1,0 +1,70 @@
+/* General Styles */
+body {
+    background-color: #f9fafb;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .orders-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #047857;
+  }
+  
+  .orders-table table {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  th, td {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f3f4f6;
+    color: #047857;
+  }
+  
+  td {
+    background-color: #fff;
+  }
+  
+  .order-status {
+    font-weight: bold;
+  }
+  
+  .status-pending {
+    color: orange;
+  }
+  
+  .status-shipped {
+    color: blue;
+  }
+  
+  .status-delivered {
+    color: green;
+  }
+  
+  .action-button {
+    background-color: #047857;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+  }
+  
+  .action-button:hover {
+    background-color: #065f46;
+  }
+  

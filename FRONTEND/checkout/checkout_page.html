@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="checkout_style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <main class="container mx-auto mt-8 px-4">
+    <h1 class="checkout-title">Checkout</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Customer Details Section -->
+      <section class="details-section">
+        <h2 class="section-title"> Details</h2>
+        <form>
+          <div class="form-group">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" id="name" name="name" class="form-input" placeholder="Enter your name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="address" class="form-label">Address</label>
+            <textarea id="address" name="address" class="form-input" rows="4" placeholder="Enter your full address" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" id="phone" name="phone" class="form-input" placeholder="e.g., 9876543210" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="e.g., example@mail.com" required>
+          </div>
+        </form>
+      </section>
+
+      <!-- Order Summary Section -->
+      <section class="summary-section">
+        <h2 class="section-title">Order Summary</h2>
+        <div class="summary-card">
+          <p class="summary-item">
+            <span>Product:</span> <span>Cow Manure</span>
+          </p>
+          <p class="summary-item">
+            <span>Weight:</span> <span>20 Kg</span>
+          </p>
+          <p class="summary-item">
+            <span>Price per Kg:</span> <span>Rs. 100</span>
+          </p>
+          <p class="summary-item">
+            <span>Subtotal:</span> <span id="subtotal">Rs. 2000</span>
+          </p>
+          <p class="summary-item">
+            <span>Delivery Charge:</span> <span id="deliveryCharge">Rs. 300</span>
+          </p>
+          <p class="summary-total">
+            <span>Total Amount:</span> <span id="totalAmount">Rs. 2300</span>
+          </p>
+        </div>
+
+        <!-- Payment Options Section -->
+        <div class="payment-section">
+          <h2 class="section-title">Payment Options</h2>
+          <div class="form-group">
+            <label class="form-label">Select a payment method:</label>
+            <div>
+              <input type="radio" id="cash" name="payment" value="cash" required>
+              <label for="cash">Cash on Delivery</label>
+            </div>
+
+          </div>
+        </div>
+
+        <button class="checkout-button">Place Order</button>
+      </section>
+    </div>
+  </main>
+  <script src="checkout.js"></script>
+</body>
+</html>
