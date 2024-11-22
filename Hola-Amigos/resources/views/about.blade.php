@@ -13,8 +13,10 @@
   
     <section class="text-gray-600 body-font">
       <div class="container flex flex-col items-center px-5 py-24 mx-auto md:flex-row">
-        <div class="w-5/6 mb-10 lg:max-w-lg lg:w-full md:w-1/2 md:mb-0">
-          <img class="object-cover object-center rounded" alt="Manure" src="images/manure1.webp">
+        <div class="w-5 mb-13 lg:max-w-lg lg:w-full md:w-1/4 md:mb-0">
+          {{-- <img class="object-cover object-center rounded" alt="Manure" src="images/manure1.webp"> --}}
+          <img class="object-cover object-center rounded" alt="Manure" src="{{('https://img.freepik.com/premium-photo/beautiful-view-lettuce-farm-concept-lettuce-fields-agriculture-farming-greenery-scenic-view_864588-123235.jpg') }}">
+
         </div>
         <div class="flex flex-col items-center text-center lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 md:items-start md:text-left">
           <h1 class="mb-4 text-3xl font-medium text-gray-900 title-font sm:text-4xl">From Rural Manure to Urban Gardens

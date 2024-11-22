@@ -45,22 +45,24 @@
         <h2 class="section-title">Order Summary</h2>
         <div class="summary-card">
           <p class="summary-item">
-            <span>Product:</span> <span>Cow Manure</span>
-          </p>
-          <p class="summary-item">
-            <span>Weight:</span> <span>20 Kg</span>
-          </p>
-          <p class="summary-item">
-            <span>Price per Kg:</span> <span>Rs. 100</span>
-          </p>
-          <p class="summary-item">
-            <span>Subtotal:</span> <span id="subtotal">Rs. 2000</span>
-          </p>
+            <span>Product:</span> <span>{{ session('productName') }}</span>
+        </p>
+        <p class="summary-item">
+            <span>Weight:</span> <span>{{ session('weight') }} Kg</span>
+        </p>
+        <p class="summary-item">
+            <span>Price per Kg:</span> <span>Rs. {{ session('pricePerKg') }}</span>
+        </p>
+        <p class="summary-item">
+            <span>Subtotal:</span> <span id="subtotal">Rs. {{ session('weight') * session('pricePerKg') }}</span>
+        </p>
+        
           <p class="summary-item">
             <span>Delivery Charge:</span> <span id="deliveryCharge">Rs. 300</span>
           </p>
           <p class="summary-total">
-            <span>Total Amount:</span> <span id="totalAmount">Rs. 2300</span>
+            <span>Total Amount:</span>
+            <span id="totalAmount">Rs. {{ (session('weight') * session('pricePerKg')) + 300 }}</span>
           </p>
         </div>
 

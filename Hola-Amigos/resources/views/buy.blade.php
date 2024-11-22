@@ -49,6 +49,7 @@
             <input 
               type="number" 
               min="1" 
+              id="weightInput"
               class="w-32 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" 
               placeholder="Enter weight"
             />
@@ -57,11 +58,18 @@
           <!-- Footer -->
           <div class="flex items-center justify-between mt-6">
             <span class="text-2xl font-bold text-gray-900">Rs. {{ $product->price }} per Kg</span>
-            <a href="{{ route('checkout') }}">
-              <button class="px-6 py-2 text-sm font-medium text-white bg-green-600 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400">
+            
+            <!-- Form to submit product data to checkout -->
+            <form action="{{ route('checkout') }}" method="POST">
+              @csrf
+              <input type="hidden" name="productName" value="{{ $product->productName }}">
+              <input type="hidden" name="pricePerKg" value="{{ $product->price }}">
+              <input type="hidden" id="weightInputHidden" name="weight" value="">
+
+              <button type="submit" class="px-6 py-2 text-sm font-medium text-white bg-green-600 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400">
                 Buy Now
               </button>
-            </a>
+            </form>
           </div>
         </div>
       </div>
@@ -69,6 +77,16 @@
   </section>
 
   <x-footer />
+
+  <!-- Add JavaScript to update the weight before submission -->
+  <script>
+    const weightInput = document.getElementById('weightInput');
+    const weightInputHidden = document.getElementById('weightInputHidden');
+
+    weightInput.addEventListener('input', function() {
+        weightInputHidden.value = weightInput.value;
+    });
+  </script>
 
 </body>
 </html>

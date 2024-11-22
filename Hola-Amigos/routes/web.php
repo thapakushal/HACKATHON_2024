@@ -9,6 +9,7 @@ use App\Http\Controllers\SellerController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BuyController;
 use App\Http\Controllers\CheckController;
+use App\Http\Controllers\BuyCheckoutController;
 
 
 
@@ -71,5 +72,7 @@ Route::get('/checkout',[CheckController::class, 'index'])->name('checkout');
 
 // // In web.php
 // Route::get('/product/{id}', [ProductController::class, 'showProduct'])->name('product.show');
+// Route::get('/buy/{id}', [BuyController::class, 'showProduct'])->name('buy');
+Route::post('/checkout', [BuyCheckoutController::class, 'checkout'])->name('checkout');
 
 
