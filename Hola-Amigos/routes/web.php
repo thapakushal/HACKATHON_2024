@@ -79,7 +79,4 @@ Route::post('/checkout', [BuyCheckoutController::class, 'checkout'])->name('chec
 
 
 
-Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
 
-
-Route::get('/customer_dashboard', [customer_dashboard::class, 'index'])->name('customer_dashboard');

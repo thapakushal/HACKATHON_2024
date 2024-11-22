@@ -44,9 +44,24 @@
           <input type="hidden" name="delivery_charge" value="300">
           <input type="hidden" name="subtotal" value="{{ session('weight') * session('pricePerKg') }}">
           <input type="hidden" name="total" value="{{ (session('weight') * session('pricePerKg')) + 300 }}">
+
+          <!-- Payment Options Section -->
+          <div class="payment-section">
+            <h2 class="section-title">Payment Options</h2>
+            <div class="form-group">
+              <label class="form-label">Select a payment method:</label>
+              <div>
+                <input type="radio" id="cash" name="payment_method" value="cash" required>
+                <label for="cash">Cash on Delivery</label>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="checkout-button">Place Order</button>
+        </form>
       </section>
 
-      <!-- Order Summary and Payment Section -->
+      <!-- Order Summary Section -->
       <section class="summary-section">
         <h2 class="section-title">Order Summary</h2>
         <div class="summary-card">
@@ -70,22 +85,7 @@
             <span id="totalAmount">Rs. {{ (session('weight') * session('pricePerKg')) + 300 }}</span>
           </p>
         </div>
-
-        <!-- Payment Options Section -->
-        <div class="mt-4 payment-section">
-          <h2 class="section-title">Payment Options</h2>
-          <div class="form-group">
-            <label class="form-label">Select a payment method:</label>
-            <div>
-              <input type="radio" id="cash" name="payment_method" value="cash" required>
-              <label for="cash">Cash on Delivery</label>
-            </div>
-          </div>
-        </div>
-
-        <button type="submit" class="mt-6 checkout-button">Place Order</button>
       </section>
-      </form>
     </div>
   </main>
   <script src="{{ asset('js/checkout.js') }}"></script>

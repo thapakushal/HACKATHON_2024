@@ -27,5 +27,12 @@ class OrderController extends Controller
 
         // Redirect with success message
         return redirect('/')->with('success', 'Order placed successfully!');
+
+
+        
     }
 }
+
+
+
+

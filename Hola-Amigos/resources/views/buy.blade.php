@@ -64,17 +64,24 @@
             <span class="text-2xl font-bold text-gray-900">Rs. {{ $product->price }} per Kg</span>
             
             <!-- Form to submit product data to checkout -->
-            <form action="{{ route('checkout') }}" method="POST">
-              @csrf
-              <input type="hidden" name="productName" value="{{ $product->productName }}">
-              <input type="hidden" name="pricePerKg" value="{{ $product->price }}">
-              <input type="hidden" x-bind:value="weight" name="weight">
+            <!-- Form to submit product data to checkout -->
+@if (Auth::check())
+<form action="{{ route('checkout') }}" method="POST">
+    @csrf
+    <input type="hidden" name="productName" value="{{ $product->productName }}">
+    <input type="hidden" name="pricePerKg" value="{{ $product->price }}">
+    <input type="hidden" x-bind:value="weight" name="weight">
 
-              <button type="submit" class="px-6 py-2 text-sm font-medium text-white bg-[#2A776F] rounded-md hover:bg-[#2A776F] focus:outline-none focus:ring-2 focus:ring-[#2A776F]">
-                Buy Now
-            </button>
-            
-            </form>
+    <button type="submit" class="px-6 py-2 text-sm font-medium text-white bg-[#2A776F] rounded-md hover:bg-[#2A776F] focus:outline-none focus:ring-2 focus:ring-[#2A776F]">
+        Buy Now
+    </button>
+        </form>
+                 @else
+             <a href="{{ route('login') }}" class="px-6 py-2 text-sm font-medium text-white bg-[#2A776F] rounded-md hover:bg-[#2A776F] focus:outline-none focus:ring-2 focus:ring-[#2A776F]">
+             Login to Buy
+        </a>
+        @endif
+
           </div>
         </div>
       </div>
