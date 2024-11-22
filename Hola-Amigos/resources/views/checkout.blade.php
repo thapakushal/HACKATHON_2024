@@ -5,18 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Checkout</title>
   <link rel="stylesheet" href="{{ asset('css/checkout.css') }}">
+
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+
   <x-header />
   <main class="container px-4 mx-auto mt-8">
     <h1 class="checkout-title">Checkout</h1>
     <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
       <!-- Customer Details Section -->
       <section class="details-section">
-        <h2 class="section-title">Details</h2>
-        <form action="{{ route('orders.store') }}" method="POST">
-          @csrf
+        <h2 class="section-title"> Details</h2>
+        <form>
           <div class="form-group">
             <label for="name" class="form-label">Full Name</label>
             <input type="text" id="name" name="name" class="form-input" placeholder="Enter your name" required>
@@ -36,6 +37,7 @@
             <label for="email" class="form-label">Email Address</label>
             <input type="email" id="email" name="email" class="form-input" placeholder="e.g., example@mail.com" required>
           </div>
+<<<<<<< HEAD
 
           <!-- Hidden Fields for Order Details -->
           <input type="hidden" name="product" value="{{ session('productName') }}">
@@ -58,6 +60,8 @@
           </div>
 
           <button type="submit" class="checkout-button">Place Order</button>
+=======
+>>>>>>> parent of fcdeca1 (order database and header changed)
         </form>
       </section>
 
@@ -67,16 +71,17 @@
         <div class="summary-card">
           <p class="summary-item">
             <span>Product:</span> <span>{{ session('productName') }}</span>
-          </p>
-          <p class="summary-item">
+        </p>
+        <p class="summary-item">
             <span>Weight:</span> <span>{{ session('weight') }} Kg</span>
-          </p>
-          <p class="summary-item">
+        </p>
+        <p class="summary-item">
             <span>Price per Kg:</span> <span>Rs. {{ session('pricePerKg') }}</span>
-          </p>
-          <p class="summary-item">
+        </p>
+        <p class="summary-item">
             <span>Subtotal:</span> <span id="subtotal">Rs. {{ session('weight') * session('pricePerKg') }}</span>
-          </p>
+        </p>
+        
           <p class="summary-item">
             <span>Delivery Charge:</span> <span id="deliveryCharge">Rs. 300</span>
           </p>
@@ -85,10 +90,29 @@
             <span id="totalAmount">Rs. {{ (session('weight') * session('pricePerKg')) + 300 }}</span>
           </p>
         </div>
+<<<<<<< HEAD
+=======
+
+        <!-- Payment Options Section -->
+        <div class="payment-section">
+          <h2 class="section-title">Payment Options</h2>
+          <div class="form-group">
+            <label class="form-label">Select a payment method:</label>
+            <div>
+              <input type="radio" id="cash" name="payment" value="cash" required>
+              <label for="cash">Cash on Delivery</label>
+            </div>
+
+          </div>
+        </div>
+
+        <button class="checkout-button">Place Order</button>
+>>>>>>> parent of fcdeca1 (order database and header changed)
       </section>
     </div>
   </main>
   <script src="{{ asset('js/checkout.js') }}"></script>
+
   <x-footer />
 </body>
 </html>

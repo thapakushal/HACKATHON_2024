@@ -10,8 +10,12 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BuyController;
 use App\Http\Controllers\CheckController;
 use App\Http\Controllers\BuyCheckoutController;
+<<<<<<< HEAD
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\customer_dashboard;
+=======
+
+>>>>>>> parent of fcdeca1 (order database and header changed)
 
 
 
@@ -77,6 +81,9 @@ Route::get('/checkout',[CheckController::class, 'index'])->name('checkout');
 Route::post('/checkout', [BuyCheckoutController::class, 'checkout'])->name('checkout');
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> parent of fcdeca1 (order database and header changed)
