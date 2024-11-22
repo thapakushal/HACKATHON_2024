@@ -1,4 +1,4 @@
-<footer class="body-font" style="background-color: #2A776F; color: white;">
+<footer class="body-font" style="background-color: #21A350; color: white;">
     <div class="container flex flex-col items-center px-5 py-8 mx-auto sm:flex-row">
       <a class="flex items-center justify-center font-medium text-white title-font md:justify-start">
         <img 

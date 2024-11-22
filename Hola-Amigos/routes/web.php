@@ -13,9 +13,6 @@ use App\Http\Controllers\BuyCheckoutController;
 <<<<<<< HEAD
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\customer_dashboard;
-=======
-
->>>>>>> parent of fcdeca1 (order database and header changed)
 
 
 
@@ -84,6 +81,7 @@ Route::post('/checkout', [BuyCheckoutController::class, 'checkout'])->name('chec
 <<<<<<< HEAD
 
 
+Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
 
-=======
->>>>>>> parent of fcdeca1 (order database and header changed)
+
+Route::get('/customer_dashboard', [customer_dashboard::class, 'index'])->name('customer_dashboard');

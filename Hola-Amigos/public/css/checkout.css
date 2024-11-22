@@ -17,7 +17,7 @@ body {
     font-weight: bold;
     text-align: center;
     margin-bottom: 2rem;
-    color: #2A776F; /* Green */
+    color: #047857; /* Green */
 }
 
 
@@ -92,7 +92,7 @@ body {
 
 .checkout-button {
     width: 100%;
-    background-color: #2A776F;
+    background-color: #047857;
     color: #ffffff;
     padding: 0.75rem 1rem;
     border: none;
