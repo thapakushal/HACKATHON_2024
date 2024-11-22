@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Buy Manure</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
 </head>
 <body class="font-sans bg-gray-100">
 
   <x-header />
 
-  <section class="py-10">
+  <section class="py-10" x-data="{ quantity: {{ $product->quantity }}, weight: 1 }">
     <div class="max-w-4xl mx-auto overflow-hidden bg-white rounded-lg shadow-lg">
       <div class="flex flex-col md:flex-row">
         <!-- Product Image -->
@@ -49,10 +50,13 @@
             <input 
               type="number" 
               min="1" 
-              id="weightInput"
+              max=""
+              x-model="weight"
+              :max="quantity"
               class="w-32 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" 
               placeholder="Enter weight"
             />
+            <p class="mt-1 text-xs text-gray-500">Max available: <span x-text="quantity"></span> kg</p>
           </div>
 
           <!-- Footer -->
@@ -64,7 +68,7 @@
               @csrf
               <input type="hidden" name="productName" value="{{ $product->productName }}">
               <input type="hidden" name="pricePerKg" value="{{ $product->price }}">
-              <input type="hidden" id="weightInputHidden" name="weight" value="">
+              <input type="hidden" x-bind:value="weight" name="weight">
 
               <button type="submit" class="px-6 py-2 text-sm font-medium text-white bg-green-600 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400">
                 Buy Now
@@ -75,18 +79,9 @@
       </div>
     </div>
   </section>
-<br><br><br><br><br><br>
+  <br><br><br><br><br>
+
   <x-footer />
-
-  <!-- Add JavaScript to update the weight before submission -->
-  <script>
-    const weightInput = document.getElementById('weightInput');
-    const weightInputHidden = document.getElementById('weightInputHidden');
-
-    weightInput.addEventListener('input', function() {
-        weightInputHidden.value = weightInput.value;
-    });
-  </script>
 
 </body>
 </html>
