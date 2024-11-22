@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <title>MAL Basket</title>
 </head>
 <body>
 
@@ -61,9 +62,11 @@
 
 
 
+<a href="{{ url('/')}}">
 <button class="px-4 py-2 font-semibold text-white rounded-md bg-[rgb(33,163,80)] mx-auto block">
     View More
   </button>
+</a>
 
   <br>
   <br>
