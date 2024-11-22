@@ -52,7 +52,11 @@ Route::get('/', [ProductController::class, 'index']);
 
 
 
-Route::get('/buy', [BuyController::class, 'index'])->name('buy');
+// Route::get('/buy', [BuyController::class, 'index'])->name('buy');
+// Product Details Route
+Route::get('/buy/{id}', [ProductController::class, 'show'])->name('buy');
+
+
 
 
 

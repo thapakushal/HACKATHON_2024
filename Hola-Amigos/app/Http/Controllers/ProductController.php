@@ -14,4 +14,10 @@ class ProductController extends Controller
         // Pass products data to the view
         return view('components.products', compact('products'));
     }
+     // Display a single product (buy.blade.php)
+     public function show($id)
+     {
+         $product = Product::findOrFail($id);
+         return view('buy', compact('product'));
+     }
 }

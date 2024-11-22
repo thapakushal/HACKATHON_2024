@@ -40,8 +40,8 @@
             <div class="flex flex-wrap -m-4">
                 @foreach($products as $product)
                 <div class="w-full p-4 lg:w-1/4 md:w-1/2">
-                    <a href="{{ route('buy') }}" class="relative block h-48 overflow-hidden rounded">
-                       <img alt="ecommerce" class="block object-cover object-center w-full h-full" 
+                    <a href="{{ route('buy', ['id' => $product->id]) }}" class="relative block h-48 overflow-hidden rounded">
+                        <img alt="ecommerce" class="block object-cover object-center w-full h-full" 
                              src="{{ $product->productImage ? asset('storage/'.$product->productImage) : 'https://dummyimage.com/420x260' }}"> 
                     </a>
                     <div class="mt-4">
@@ -51,6 +51,7 @@
                         <p class="mt-1 price">Rs. {{ $product->price }} per Kg</p>
                     </div>
                 </div>
+                
                 @endforeach
             </div>
         </div>
