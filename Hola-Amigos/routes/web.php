@@ -10,6 +10,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BuyController;
 use App\Http\Controllers\CheckController;
 use App\Http\Controllers\BuyCheckoutController;
+use App\Http\Controllers\OrderController;
 
 
 
@@ -76,3 +77,6 @@ Route::get('/checkout',[CheckController::class, 'index'])->name('checkout');
 Route::post('/checkout', [BuyCheckoutController::class, 'checkout'])->name('checkout');
 
 
+
+
+Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
