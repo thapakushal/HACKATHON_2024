@@ -28,7 +28,7 @@ body {
     display: block;
     font-size: 0.875rem; 
     font-weight: 500; 
-    color: #047857; 
+    color: #2A776F; 
   }
   
   .form-input,
@@ -46,14 +46,14 @@ body {
   .form-input:focus,
   .form-select:focus,
   .form-input[type="file"]:focus {
-    border-color: #10b981; 
+    border-color: #2A776F; 
     box-shadow: 0 0 0 3px #d1fae5; 
   }
   
   /* Button Styles */
   .submit-button {
     width: 100%; 
-    background-color: #047857; 
+    background-color: #2A776F; 
     color: #ffffff; 
     padding: 0.5rem 1rem; 
     border: none;
@@ -65,7 +65,7 @@ body {
   }
   
   .submit-button:hover {
-    background-color: #065f46; 
+    background-color: #2A776F; 
   }
   
   /* Table Styles */
@@ -81,7 +81,7 @@ body {
   }
   
   .table-header {
-    background-color: #047857; 
+    background-color: #2A776F; 
     color: #ffffff; 
   }
   
@@ -96,7 +96,7 @@ body {
   
   /* Status Styles */
   .status-pending {
-    color: #047857; 
+    color: #2A776F; 
     font-size: 0.875rem; 
     font-weight: 500; 
   }

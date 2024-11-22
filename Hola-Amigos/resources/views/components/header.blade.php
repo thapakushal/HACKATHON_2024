@@ -1,7 +1,7 @@
 <!-- Add Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-<header class="text-white body-font bg-[#21A350] sticky top-0 z-50" style="font-family: 'Poppins', sans-serif;">
+<header class="text-white body-font bg-[#2A776F] sticky top-0 z-50" style="font-family: 'Poppins', sans-serif;">
     <div class="container flex flex-col flex-wrap items-center p-5 mx-auto md:flex-row">
         <a class="flex items-center mb-4 font-medium title-font md:mb-0">
             <img 
@@ -21,7 +21,7 @@
         
         <!-- Link to the login page -->
         <a href="{{ route('login') }}" class="ml-8">
-            <button class="inline-flex items-center px-4 py-2 mt-4 text-white bg-[#147F3F] rounded-full shadow-md hover:bg-[#0E5C2E] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#21A350] transition duration-300 md:mt-0">
+            <button class="inline-flex items-center px-4 py-2 mt-4 text-white bg-[#2A776F] rounded-full shadow-md hover:bg-[#0E5C2E] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#2A776F] transition duration-300 md:mt-0">
                 SELLER LOGIN
                 <img 
                     class="w-5 h-5 ml-2"

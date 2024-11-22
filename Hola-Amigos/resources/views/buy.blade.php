@@ -31,7 +31,7 @@
           <!-- Ratings -->
           <div class="flex items-center mb-4">
             @for ($i = 0; $i < 4; $i++)
-              <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+              <svg class="w-5 h-5bg-[#2A776F]" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
               </svg>
             @endfor
@@ -70,9 +70,10 @@
               <input type="hidden" name="pricePerKg" value="{{ $product->price }}">
               <input type="hidden" x-bind:value="weight" name="weight">
 
-              <button type="submit" class="px-6 py-2 text-sm font-medium text-white bg-green-600 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400">
+              <button type="submit" class="px-6 py-2 text-sm font-medium text-white bg-[#2A776F] rounded-md hover:bg-[#2A776F] focus:outline-none focus:ring-2 focus:ring-[#2A776F]">
                 Buy Now
-              </button>
+            </button>
+            
             </form>
           </div>
         </div>

@@ -11,7 +11,7 @@ use App\Http\Controllers\BuyController;
 use App\Http\Controllers\CheckController;
 use App\Http\Controllers\BuyCheckoutController;
 use App\Http\Controllers\OrderController;
-
+use App\Http\Controllers\customer_dashboard;
 
 
 
@@ -80,3 +80,6 @@ Route::post('/checkout', [BuyCheckoutController::class, 'checkout'])->name('chec
 
 
 Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
+
+
+Route::get('/customer_dashboard', [customer_dashboard::class, 'index'])->name('customer_dashboard');
